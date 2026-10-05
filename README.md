@@ -146,11 +146,11 @@ Mac 对应 `.venv/bin/python scripts/audit-public.py`。扫描会检查 Git 待�
 ```powershell
 # Windows；Mac 将解释器换为 .venv/bin/python
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.\.venv\Scripts\python.exe -m unittest discover -s tests -p 'test_*.py'
+.\.venv\Scripts\python.exe -X utf8 -m unittest discover -s tests -p 'test_*.py'
 .\.venv\Scripts\python.exe scripts/bootstrap.py --check
 ```
 
-测试使用虚构记录，覆盖时间边界、分片去重、压缩正文、媒体元数据清理、凭证存储路由、交互导入限制和发布扫描。Windows DPAPI 测试只在 Windows 执行，Mac Keychain 单元测试使用替身，不等于真实钥匙串或微信验收。
+测试使用虚构记录，覆盖时间边界、分片去重、压缩正文、媒体元数据清理、凭证存储路由、交互导入限制、发布扫描及非 UTF-8 环境的中文输出。Windows DPAPI 测试只在 Windows 执行，Mac Keychain 单元测试使用替身，不等于真实钥匙串或微信验收。
 
 可选的 WeFlow HTTP 备用入口位于 `scripts/export-recent.mjs`，需要 Node.js 22+、能正常运行的本机 WeFlow API 以及本机 `WEFLOW_TOKEN`。其测试可用 `node --test tests/export-recent.test.mjs`。它不是当前默认接入方式，接口中的消息文本同样应留在本机。
 

@@ -1,6 +1,9 @@
 import importlib.util
 import json
+import os
 from pathlib import Path
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -52,6 +55,19 @@ class ProjectTests(unittest.TestCase):
             self.assertIn('/' + entry['commit'] + '/', entry['url'])
             self.assertEqual(len(entry['sha256']), 64)
             self.assertFalse(set(entry['platforms']) - {'win32', 'darwin'})
+
+    def test_chinese_cli_output_in_non_utf8_windows_environment(self):
+        environment = {**os.environ, 'PYTHONIOENCODING': 'cp1252'}
+        commands = [
+            (['scripts/bootstrap.py', '--check', '--without-hook'], '读取组件'),
+            (['scripts/local-reader.py', '--help'], '本机微信'),
+            (['scripts/audit-public.py'], '检查'),
+        ]
+        for args, expected in commands:
+            with self.subTest(script=args[0]):
+                result = subprocess.run([sys.executable, *args], cwd=ROOT, env=environment, capture_output=True)
+                self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', errors='replace'))
+                self.assertIn(expected, result.stdout.decode('utf-8'))
 
 
 if __name__ == '__main__':
