@@ -1,0 +1,30 @@
+name: Windows 与 macOS 检查
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 安装 Python 包
+        run: python -m pip install -r requirements-dev.txt
+      - name: 获取固定读取模块（不运行微信连接组件）
+        run: python scripts/bootstrap.py --fetch-only --without-hook
+      - name: 验证读取与凭证逻辑（虚构数据）
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: 验证备用 HTTP 导出
+        run: node --test tests/export-recent.test.mjs
+      - name: 发布文件基础检查
+        run: python scripts/audit-public.py

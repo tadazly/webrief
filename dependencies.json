@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "project": "wx-assist",
+      "commit": "49ec2fe5ff56ad490cbdb548322aa496a6be30fa",
+      "url": "https://raw.githubusercontent.com/MaleleStudySpace/wx-assist/49ec2fe5ff56ad490cbdb548322aa496a6be30fa/src/wechat/db_crypto.py",
+      "path": "tools/wx-reader/wx_reader/db_crypto.py",
+      "sha256": "9d79915c75399e0e5d8b422b998b3d26ef807a78a5f512d8b3308ff9848309e0",
+      "platforms": [
+        "win32",
+        "darwin"
+      ]
+    },
+    {
+      "project": "wx-assist",
+      "commit": "49ec2fe5ff56ad490cbdb548322aa496a6be30fa",
+      "url": "https://raw.githubusercontent.com/MaleleStudySpace/wx-assist/49ec2fe5ff56ad490cbdb548322aa496a6be30fa/src/wechat/db_reader.py",
+      "path": "tools/wx-reader/wx_reader/db_reader.py",
+      "sha256": "f90313b2681a173adec202abf1c84a32ca53d84910682424d6a606e393f20609",
+      "platforms": [
+        "win32",
+        "darwin"
+      ]
+    },
+    {
+      "project": "wx-assist",
+      "commit": "49ec2fe5ff56ad490cbdb548322aa496a6be30fa",
+      "url": "https://raw.githubusercontent.com/MaleleStudySpace/wx-assist/49ec2fe5ff56ad490cbdb548322aa496a6be30fa/src/wechat/content_codec.py",
+      "path": "tools/wx-reader/wx_reader/content_codec.py",
+      "sha256": "eb5d53c57e011f079c7c01d5e5bd60f838d0bcb1fa052682d741b212d048811a",
+      "platforms": [
+        "win32",
+        "darwin"
+      ]
+    },
+    {
+      "project": "wx-assist",
+      "commit": "49ec2fe5ff56ad490cbdb548322aa496a6be30fa",
+      "url": "https://raw.githubusercontent.com/MaleleStudySpace/wx-assist/49ec2fe5ff56ad490cbdb548322aa496a6be30fa/LICENSE",
+      "path": "tools/wx-reader/LICENSE",
+      "sha256": "13f1ff48477984b9f518e04c47dce5f099d3cd721222090fa766befa3331901a",
+      "platforms": [
+        "win32",
+        "darwin"
+      ]
+    },
+    {
+      "project": "WeFlow",
+      "commit": "93d46a3183b98bfe5073ea89ecaa32a4f80f79d3",
+      "url": "https://raw.githubusercontent.com/iminc/WeFlow/93d46a3183b98bfe5073ea89ecaa32a4f80f79d3/resources/key/win32/x64/wx_key.dll",
+      "path": "tools/WeFlow/resources/key/win32/x64/wx_key.dll",
+      "sha256": "9a2f2c6a09a3219afa4748a5e7e513d99c607173c3112c5afcc888996b98248c",
+      "platforms": [
+        "win32"
+      ]
+    },
+    {
+      "project": "WeFlow",
+      "commit": "93d46a3183b98bfe5073ea89ecaa32a4f80f79d3",
+      "url": "https://raw.githubusercontent.com/iminc/WeFlow/93d46a3183b98bfe5073ea89ecaa32a4f80f79d3/LICENSE",
+      "path": "tools/WeFlow/LICENSE",
+      "sha256": "9ce32add243d0296f85152eb573fff9e8bbb8dd3a6d9874dd4d2aa818e9c2724",
+      "platforms": [
+        "win32"
+      ]
+    }
+  ]
+}

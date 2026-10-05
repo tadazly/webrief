@@ -1,0 +1,4 @@
+interface:
+  display_name: "配置微信总结环境"
+  short_description: "配置 Windows 或 Mac 的本机读取环境、固定依赖与加密凭证"
+  default_prompt: "使用 $wechat-setup 配置本项目环境，并核对当前平台的连接条件。"

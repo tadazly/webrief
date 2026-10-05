@@ -1,0 +1,4 @@
+interface:
+  display_name: "总结微信聊天"
+  short_description: "总结指定联系人或群的最近聊天，提取重点、明确决定和待办事项"
+  default_prompt: "使用 $wechat-summary 总结我指定联系人或群最近24小时的聊天记录。"
